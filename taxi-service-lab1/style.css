@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: 1px solid #999;
+    background: #eee;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #333;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
