@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: 1px solid #999;
+    background: #eee;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #333;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+/* Кнопки додавання записів */
+.add-button {
+    margin-bottom: 15px;
+    padding: 9px 14px;
+    border: 1px solid #777;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-button:hover {
+    background: #555;
+}
+
+/* Затемнення фону модального вікна */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Приховуємо вікно, коли воно не використовується */
+.modal[hidden] {
+    display: none;
+}
+
+/* Вміст модального вікна */
+.modal-content {
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+/* Поля форми */
+#modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#modal-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#modal-fields label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#modal-fields input,
+#modal-fields select {
+    padding: 8px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+/* Кнопки форми */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-actions button {
+    padding: 9px 14px;
+    cursor: pointer;
+}
