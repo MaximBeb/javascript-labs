@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервіс таксі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Сервіс таксі</h1>
+
+    <div class="tabs">
+        <button class="tab-button active" data-tab="drivers">
+            Водії
+        </button>
+
+        <button class="tab-button" data-tab="cars">
+            Автомобілі
+        </button>
+
+        <button class="tab-button" data-tab="orders">
+            Замовлення
+        </button>
+    </div>
+
+    <div id="drivers" class="tab-content active">
+        <h2>Водії</h2>
+		<button class="add-button" data-entity="drivers">
+			+ Додати водія
+		</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ПІБ</th>
+                    <th>Телефон</th>
+                    <th>Стаж</th>
+                    <th>Рейтинг</th>
+                    <th>Кількість поїздок</th>
+                    <th>Статус</th>
+					<th>Дії</th>
+                </tr>
+            </thead>
+
+            <tbody id="drivers-table"></tbody>
+        </table>
+    </div>
+
+    <div id="cars" class="tab-content">
+        <h2>Автомобілі</h2>
+		<button class="add-button" data-entity="cars">
+			+ Додати автомобіль
+		</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Марка</th>
+                    <th>Модель</th>
+                    <th>Рік випуску</th>
+                    <th>Колір</th>
+                    <th>Держ. номер</th>
+                    <th>Тип кузова</th>
+                    <th>ID водія</th>
+					<th>Дії</th>
+                </tr>
+            </thead>
+
+            <tbody id="cars-table"></tbody>
+        </table>
+    </div>
+
+    <div id="orders" class="tab-content">
+        <h2>Замовлення</h2>
+		<button class="add-button" data-entity="orders">
+			+ Додати замовлення
+		</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ID водія</th>
+                    <th>Клієнт</th>
+                    <th>Телефон</th>
+                    <th>Адреса подачі</th>
+                    <th>Адреса призначення</th>
+                    <th>Вартість</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+					<th>Дії</th>
+                </tr>
+            </thead>
+
+            <tbody id="orders-table"></tbody>
+        </table>
+    </div>
+	<!-- Модальне вікно -->
+	<div id="modal" class="modal" hidden>
+		<div class="modal-content">
+			<h2 id="modal-title">Додавання запису</h2>
+
+			<form id="modal-form">
+				<div id="modal-fields"></div>
+
+				<div class="modal-actions">
+					<button type="submit">Зберегти</button>
+					<button type="button" id="cancel-button">
+						Скасувати
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+    <script src="script.js"></script>
+</body>
+</html>
